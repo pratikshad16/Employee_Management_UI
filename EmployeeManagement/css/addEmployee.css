@@ -1,0 +1,65 @@
+body  
+{  
+    margin: 0;  
+    padding: 0;
+    background-color: #8fabb6;
+    background-size: cover;
+}
+.loginbox{
+    width: 450px;
+    height: 750px;
+    background: white; 
+    color: black;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 60px 30px;
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+}
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.loginbox input[type="text"],input[type="password"],input[type="tel"],input[type="Email"]
+{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: black;
+    font-size: 16px;
+}
+.loginbox span[id="firstNameError"],span[id="lastNameError"],span[id="emailError"],span[id="phoneError"],span[id="cityError"],span[id="salaryError"]
+{
+    color: red;   
+}
+.loginbox input[type="button"]
+{
+    border: none;
+    outline: none;
+    height: 50px;
+    background: navy;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.loginbox input[type="button"]:hover
+{
+    cursor: pointer;
+    background: skyblue;
+    color: #000;
+}

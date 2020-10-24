@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="../css/registrationStyle.css">
+    <script  type = "text/javascript" src="../javascript/registration.js">
+    </script>
+    </head>
+<body>
+    <div class="loginbox">
+        <form action="../pages/login.html" onsubmit=" return validate()">
+        <h1>Registration Form</h1>
+            <p>First Name</p>
+            <input type="text" name="" id ="firstname" placeholder="Enter Firstname">
+            <span id="firstNameError"></span>
+            <p>Last Name</p>
+            <input type="text" name="" id ="lastname" placeholder="Enter Lastname">
+            <span id="lastNameError"></span>
+            <p>Email</p>
+            <input type="Email" name="" id = "email" placeholder="Enter Email">
+            <span id="emailError"></span>
+            <p>Phone Number</p>
+            <input type="tel" name="" id="phone" placeholder="Enter Phone Number">
+            <span id="phoneError"></span>
+            <p>Password</p>
+            <input type="password" name="" id ="password" placeholder="Enter Password">
+            <span id="passwordError"></span>
+            <p>Confirm Password</p>
+            <input type="password" name="" id ="cpassword" placeholder="Enter Password again">
+            <span id="cpasswordError"></span>
+            <input type="submit" name="" value="Submit"><br>
+
+        </form>
+    </div>
+</body>
+
+
+</html>

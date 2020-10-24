@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>Employee Management System</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard of registration</title>
+    <link rel="stylesheet" href="../css/dashBoardStyle.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="Dashboard">
+        <a href="../pages/addEmployee.html"><button type="submit" id="AddEmployeeButton">+ Add Employee</button></a>
+    </div>
+    <p>Add Employees here</p>
+    <table class="dashTable" id="tableId">
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>EmailId</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            console.log("Hello");
+            $.getJSON("../json/data.json", function (data) {
+                console.log("Json Data", data);
+                var employee_data = '';
+                $.each(data, function (key, value) {
+                    employee_data += '<tr>';
+                    employee_data += '<td>' + value.firstName + '</td>';
+                    employee_data += '<td>' + value.lastName + '</td>';
+                    employee_data += '<td>' + value.emailId + '</td>';
+                    employee_data += '<td><a  href="../pages/editEmployee.html"><button>Edit</button></a></td>';
+                    employee_data += '<td><button>Delete</button></td>';
+                    employee_data += '</tr>';
+                });
+                $('#tableId').append(employee_data);
+            })
+        });
+    </script>
+</body>
+
+</html>
